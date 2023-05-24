@@ -4,6 +4,22 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/*reproductor de musica*/
+var playlistId = "PLky1lqOeUNRi_jSClJRntXM8wMVDhbAj6";
+
+// Función que crea el reproductor de YouTube
+function onYouTubeIframeAPIReady() {
+  // Crea el reproductor de YouTube
+  var player = new YT.Player('player', {
+    height: '200',
+    width: '300',
+    playerVars: {
+      'listType': 'playlist',
+      'list': playlistId
+    }
+  });
+}
+
 (function($) {
 
 	var	$window = $(window),
